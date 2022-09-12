@@ -37,6 +37,7 @@ function modelReady() {
 
 function draw() {
   image(video, 0, 0, width, height);
+  scale(-1, 1);
 
   // We can call both functions to draw all keypoints and the skeletons
   drawKeypoints();
