@@ -58,6 +58,11 @@ function drawKeypoints()  {
         noStroke();
         ellipse(keypoint.position.x, keypoint.position.y, 10, 10);
       }
+      if(keypoint.score > 0.2 && keypoint.position.x > width/2){
+        fill(0,255,0);
+        noStroke();
+        ellipse(keypoint.position.x, keypoint.position.y,10,10);
+      }
     }
   }
 }
@@ -90,6 +95,3 @@ function keyPressed()
         fullscreen(!fs);
     }
 }
-
-
-
