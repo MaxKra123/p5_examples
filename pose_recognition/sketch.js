@@ -19,8 +19,7 @@ function setup() {
   createCanvas(640, 480);
   video = createCapture(VIDEO);
   video.size(width, height);
-  translate(video.width, 0);
-  scale(-1, 1);
+
 
   // Create a new poseNet method with a single detection
   poseNet = ml5.poseNet(video, modelReady);
@@ -38,6 +37,8 @@ function modelReady() {
 }
 
 function draw() {
+  translate(video.width, 0);
+  scale(-1, 1);
   image(video, 0, 0, width, height);
 
 
