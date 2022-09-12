@@ -53,12 +53,12 @@ function drawKeypoints()  {
       // A keypoint is an object describing a body part (like rightArm or leftShoulder)
       let keypoint = pose.keypoints[j];
       // Only draw an ellipse is the pose probability is bigger than 0.2
-      if (keypoint.score > 0.2) {
+      if (keypoint.score > 0.1) {
         fill(255, 0, 0);
         noStroke();
         ellipse(keypoint.position.x, keypoint.position.y, 10, 10);
       }
-      if(keypoint.score > 0.2 && keypoint.position.x > width/2){
+      if(keypoint.score > 0.1 && keypoint.position.x > width/2){
         fill(0,255,0);
         noStroke();
         ellipse(keypoint.position.x, keypoint.position.y,10,10);
