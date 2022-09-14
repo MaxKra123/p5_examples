@@ -100,12 +100,9 @@ function drawKeypoints()  {
         strokeWeight(0);
         fill(25, 105, 25);
         ellipse(pose.keypoints[0].position.x, pose.keypoints[0].position.y, 250,250);
-        for(i = 0; i <10; i++)
-        {
-          randomHeadLeafX = random(pose.keypoints[0].position.x-100, pose.keypoints[0].position.x+100);
-          randomHeadLeafY = random(pose.keypoints[0].position.y-100, pose.keypoints[0].position.y+100)
-          fill(76, 125, 76);
-          ellipse(randomHeadLeafX, randomHeadLeafY, 50, 50);
+
+        fill(76, 125, 76);
+        ellipse(pose.keypoints[0].position.x-100, pose.keypoints[0].position.x+100, 50, 50);
         }
 
       }
