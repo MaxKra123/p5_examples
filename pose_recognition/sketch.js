@@ -68,41 +68,93 @@ function drawKeypoints()  {
         //chest - 5,6,11,12
         fill(107, 53, 17);
         beginShape();
+        strokeWeight(50);
         vertex(pose.keypoints[5].position.x, pose.keypoints[5].position.y);
         vertex(pose.keypoints[6].position.x, pose.keypoints[6].position.y);
         vertex(pose.keypoints[12].position.x, pose.keypoints[12].position.y);
         vertex(pose.keypoints[11].position.x, pose.keypoints[11].position.y);
         endShape(CLOSE);
 
-      //  beginShape();
-      //  vertex(pose.keypoints[5].position.x-20, pose.keypoints[5].position.y);
-      //  vertex(pose.keypoints[5].position.x+20, pose.keypoints[5].position.y);
-      //  vertex(pose.keypoints[7].position.x-20, pose.keypoints[7].position.y);
-      //  vertex(pose.keypoints[7].position.x+20, pose.keypoints[7].position.y);
-      //  endShape(CLOSE);
-
-      //upperarm 5/7, 6/8
-        strokeWeight(50);
-        stroke(107, 53, 17);
-        line(pose.keypoints[5].position.x, pose.keypoints[5].position.y,
-              pose.keypoints[7].position.x, pose.keypoints[7].position.y);
-        line(pose.keypoints[6].position.x, pose.keypoints[6].position.y,
-              pose.keypoints[8].position.x, pose.keypoints[8].position.y);
-
-      //lower arm 8/10, 7/9
-        stroke(107, 53, 17);
-        line(pose.keypoints[8].position.x, pose.keypoints[8].position.y,
-              pose.keypoints[10].position.x, pose.keypoints[10].position.y);
-        line(pose.keypoints[7].position.x, pose.keypoints[7].position.y,
-              pose.keypoints[9].position.x, pose.keypoints[9].position.y);
-
       //face leaves - 0 center, 1/3 left, 2/4 right
         strokeWeight(0);
         fill(25, 105, 25);
         ellipse(pose.keypoints[0].position.x, pose.keypoints[0].position.y, 250,250);
 
+        r = 75;
+        ellipse(pose.keypoints[0].position.x-r, pose.keypoints[0].position.y-r, 200,200);
+        ellipse(pose.keypoints[0].position.x+r, pose.keypoints[0].position.y+r, 200,200);
+        ellipse(pose.keypoints[0].position.x-r, pose.keypoints[0].position.y+r, 200,200);
+        ellipse(pose.keypoints[0].position.x+r, pose.keypoints[0].position.y-r, 200,200);
+
+        r = 125;
+        ellipse(pose.keypoints[1].position.x-r, pose.keypoints[1].position.y, 50, 50);
+        ellipse(pose.keypoints[1].position.x+r, pose.keypoints[1].position.y, 50, 50);
+        ellipse(pose.keypoints[1].position.x, pose.keypoints[1].position.y-r, 50, 50);
+        ellipse(pose.keypoints[1].position.x, pose.keypoints[1].position.y+r, 50, 50);
+
+        ellipse(pose.keypoints[2].position.x-r, pose.keypoints[2].position.y, 50, 50);
+        ellipse(pose.keypoints[2].position.x+r, pose.keypoints[2].position.y, 50, 50);
+        ellipse(pose.keypoints[2].position.x, pose.keypoints[2].position.y-r, 50, 50);
+        ellipse(pose.keypoints[2].position.x, pose.keypoints[2].position.y+r, 50, 50);
+
         fill(76, 125, 76);
-        ellipse(pose.keypoints[0].position.x-50, pose.keypoints[0].position.x+50, 50, 50);
+        r = 50;
+        ellipse(pose.keypoints[0].position.x-r, pose.keypoints[0].position.y, 100, 100);
+        ellipse(pose.keypoints[0].position.x+r, pose.keypoints[0].position.y, 100, 100);
+        ellipse(pose.keypoints[0].position.x, pose.keypoints[0].position.y-r, 100, 100);
+        ellipse(pose.keypoints[0].position.x, pose.keypoints[0].position.y+r, 100, 100);
+
+        fill(76, 125, 76);
+        r = 100;
+        ellipse(pose.keypoints[3].position.x-r, pose.keypoints[3].position.y, 100, 100);
+        ellipse(pose.keypoints[3].position.x+r, pose.keypoints[3].position.y, 100, 100);
+        ellipse(pose.keypoints[3].position.x, pose.keypoints[3].position.y-r, 100, 100);
+        ellipse(pose.keypoints[3].position.x, pose.keypoints[3].position.y+r, 100, 100);
+
+        ellipse(pose.keypoints[4].position.x-r, pose.keypoints[4].position.y, 100, 100);
+        ellipse(pose.keypoints[4].position.x+r, pose.keypoints[4].position.y, 100, 100);
+        ellipse(pose.keypoints[4].position.x, pose.keypoints[4].position.y-r, 100, 100);
+        ellipse(pose.keypoints[4].position.x, pose.keypoints[4].position.y+r, 100, 100);
+
+        fill(62, 194, 88);
+        r = 75;
+        ellipse(pose.keypoints[1].position.x-r, pose.keypoints[1].position.y, 50, 50);
+        ellipse(pose.keypoints[1].position.x+r, pose.keypoints[1].position.y, 50, 50);
+        ellipse(pose.keypoints[1].position.x, pose.keypoints[1].position.y-r, 50, 50);
+        ellipse(pose.keypoints[1].position.x, pose.keypoints[1].position.y+r, 50, 50);
+
+        ellipse(pose.keypoints[2].position.x-r, pose.keypoints[2].position.y, 50, 50);
+        ellipse(pose.keypoints[2].position.x+r, pose.keypoints[2].position.y, 50, 50);
+        ellipse(pose.keypoints[2].position.x, pose.keypoints[2].position.y-r, 50, 50);
+        ellipse(pose.keypoints[2].position.x, pose.keypoints[2].position.y+r, 50, 50);
+
+        fill(25, 105, 25);
+        r = 100;
+        ellipse(pose.keypoints[1].position.x-r, pose.keypoints[1].position.y-r, 50, 50);
+        ellipse(pose.keypoints[1].position.x+r, pose.keypoints[1].position.y+r, 50, 50);
+        ellipse(pose.keypoints[1].position.x-r, pose.keypoints[1].position.y+r, 50, 50);
+        ellipse(pose.keypoints[1].position.x+r, pose.keypoints[1].position.y-r, 50, 50);
+
+        ellipse(pose.keypoints[2].position.x-r, pose.keypoints[2].position.y-r, 50, 50);
+        ellipse(pose.keypoints[2].position.x+r, pose.keypoints[2].position.y+r, 50, 50);
+        ellipse(pose.keypoints[2].position.x-r, pose.keypoints[2].position.y+r, 50, 50);
+        ellipse(pose.keypoints[2].position.x+r, pose.keypoints[2].position.y-r, 50, 50);
+
+        //upperarm 5/7, 6/8
+          strokeWeight(50);
+          stroke(107, 53, 17);
+          line(pose.keypoints[5].position.x, pose.keypoints[5].position.y,
+                pose.keypoints[7].position.x, pose.keypoints[7].position.y);
+          line(pose.keypoints[6].position.x, pose.keypoints[6].position.y,
+                pose.keypoints[8].position.x, pose.keypoints[8].position.y);
+
+        //lower arm 8/10, 7/9
+          stroke(107, 53, 17);
+          line(pose.keypoints[8].position.x, pose.keypoints[8].position.y,
+                pose.keypoints[10].position.x, pose.keypoints[10].position.y);
+          line(pose.keypoints[7].position.x, pose.keypoints[7].position.y,
+                pose.keypoints[9].position.x, pose.keypoints[9].position.y);
+
 
 
       }
@@ -125,7 +177,7 @@ function drawSkeleton() {
       let partA = skeleton[j][0];
       let partB = skeleton[j][1];
       stroke(107, 53, 17);
-      strokeWeight(50);
+      strokeWeight(0);
       line(partA.position.x, partA.position.y, partB.position.x, partB.position.y);
     }
   }
