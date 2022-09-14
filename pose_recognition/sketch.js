@@ -67,12 +67,12 @@ function drawKeypoints()  {
         ellipse(keypoint.position.x, keypoint.position.y, 10, 10);
 
         //chest - 5,6,11,12
-        fill(255,255,0);
+        fill(107, 53, 17);
         beginShape();
         vertex(pose.keypoints[5].position.x, pose.keypoints[5].position.y);
-        vertex(85, 20);
-        vertex(85, 75);
-        vertex(30, 75);
+        vertex(pose.keypoints[6].position.x, pose.keypoints[6].position.y);
+        vertex(pose.keypoints[11].position.x, pose.keypoints[11].position.y);
+        vertex(pose.keypoints[12].position.x, pose.keypoints[12].position.y);
         endShape(CLOSE);
       }
       if(keypoint.score > 0.2 && keypoint.position.x > width/2){
