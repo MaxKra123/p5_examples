@@ -42,6 +42,8 @@ function draw() {
   image(video, 0, 0, width, height);
 
 
+
+
   // We can call both functions to draw all keypoints and the skeletons
   drawKeypoints();
   drawSkeleton();
@@ -63,6 +65,15 @@ function drawKeypoints()  {
         textSize(18);
         text(j, keypoint.position.x, keypoint.position.y);
         ellipse(keypoint.position.x, keypoint.position.y, 10, 10);
+
+        //chest - 5,6,11,12
+        fill(255,255,0);
+        beginShape();
+        vertex(pose.keypoints[5].position.x, pose.keypoints[5].position.y);
+        vertex(85, 20);
+        vertex(85, 75);
+        vertex(30, 75);
+        endShape(CLOSE);
       }
       if(keypoint.score > 0.2 && keypoint.position.x > width/2){
         fill(0,255,0);
@@ -87,6 +98,7 @@ function drawSkeleton() {
     }
   }
 }
+
 
 
 
