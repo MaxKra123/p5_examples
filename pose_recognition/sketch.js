@@ -98,9 +98,9 @@ function drawKeypoints()  {
               pose.keypoints[9].position.x, pose.keypoints[9].position.y);
 
       //face leaves - 0 center, 1/3 left, 2/4 right
-        fill(0,255,0);
-        stroke(0,255,0);
-        ellipse(pose.keypoints[0].position.x, pose.keypoints[0].position.y, 100,100);
+        fill(25, 105, 25);
+        stroke(25, 105, 25);
+        ellipse(pose.keypoints[0].position.x, pose.keypoints[0].position.y, 200,200);
       }
       if(keypoint.score > 0.2 && keypoint.position.x > width/2){
         fill(0,255,0);
