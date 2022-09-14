@@ -103,11 +103,9 @@ function drawKeypoints()  {
         ellipse(pose.keypoints[0].position.x, pose.keypoints[0].position.y, 250,250);
         for(i = 0; i <10; i++)
         {
-          center = [pose.keypoints[0].position.x,pose.keypoints[0].position.y];
-          angleMode(DEGREES);
-          rotate(20, center);
           fill(76, 125, 76);
-          ellipse(pose.keypoints[1].position.x, pose.keypoints[1].position.y, 150,150);
+          ellipse(random(pose.keypoints[1].position.x-100, pose.keypoints[1].position.x+100),
+                 random(pose.keypoints[1].position.y-100, pose.keypoints[1].position.y+100));
         }
 
       }
