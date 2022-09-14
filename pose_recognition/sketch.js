@@ -14,7 +14,6 @@ let poses = [];
 
 
 
-
 function setup() {
   createCanvas(640, 480);
   video = createCapture(VIDEO);
@@ -103,9 +102,10 @@ function drawKeypoints()  {
         ellipse(pose.keypoints[0].position.x, pose.keypoints[0].position.y, 250,250);
         for(i = 0; i <10; i++)
         {
+          randomHeadLeafX = random(pose.keypoints[0].position.x-100, pose.keypoints[0].position.x+100);
+          randomHeadLeafY = random(pose.keypoints[0].position.y-100, pose.keypoints[0].position.y+100)
           fill(76, 125, 76);
-          ellipse(random(pose.keypoints[0].position.x-100, pose.keypoints[0].position.x+100),
-                 random(pose.keypoints[0].position.y-100, pose.keypoints[0].position.y+100), 50, 50);
+          ellipse(randomHeadLeafX, randomHeadLeafY, 50, 50);
         }
 
       }
