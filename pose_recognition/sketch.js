@@ -68,7 +68,6 @@ function drawKeypoints()  {
 
         //chest - 5,6,11,12
         fill(107, 53, 17);
-        strokeWeight(50);
         beginShape();
         vertex(pose.keypoints[5].position.x, pose.keypoints[5].position.y);
         vertex(pose.keypoints[6].position.x, pose.keypoints[6].position.y);
@@ -90,6 +89,13 @@ function drawKeypoints()  {
               pose.keypoints[7].position.x, pose.keypoints[7].position.y);
         line(pose.keypoints[6].position.x, pose.keypoints[6].position.y,
               pose.keypoints[8].position.x, pose.keypoints[8].position.y);
+
+      //lower arm 8/10, 9/11
+        stroke(107, 53, 17);
+        line(pose.keypoints[8].position.x, pose.keypoints[8].position.y,
+              pose.keypoints[10].position.x, pose.keypoints[10].position.y);
+        line(pose.keypoints[9].position.x, pose.keypoints[9].position.y,
+              pose.keypoints[11].position.x, pose.keypoints[11].position.y);
       }
       if(keypoint.score > 0.2 && keypoint.position.x > width/2){
         fill(0,255,0);
@@ -109,8 +115,8 @@ function drawSkeleton() {
     for (let j = 0; j < skeleton.length; j++) {
       let partA = skeleton[j][0];
       let partB = skeleton[j][1];
-      stroke(255, 0, 0);
-      strokeWeight(1);
+      stroke(107, 53, 17);
+      strokeWeight(50);
       line(partA.position.x, partA.position.y, partB.position.x, partB.position.y);
     }
   }
