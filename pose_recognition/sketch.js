@@ -71,8 +71,8 @@ function drawKeypoints()  {
         beginShape();
         vertex(pose.keypoints[5].position.x, pose.keypoints[5].position.y);
         vertex(pose.keypoints[6].position.x, pose.keypoints[6].position.y);
-        vertex(pose.keypoints[11].position.x, pose.keypoints[11].position.y);
         vertex(pose.keypoints[12].position.x, pose.keypoints[12].position.y);
+        vertex(pose.keypoints[11].position.x, pose.keypoints[11].position.y);
         endShape(CLOSE);
       }
       if(keypoint.score > 0.2 && keypoint.position.x > width/2){
