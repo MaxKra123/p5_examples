@@ -80,7 +80,7 @@ function drawKeypoints()  {
         vertex(pose.keypoints[5].position.x+20, pose.keypoints[5].position.y);
         vertex(pose.keypoints[7].position.x-20, pose.keypoints[7].position.y);
         vertex(pose.keypoints[7].position.x+20, pose.keypoints[7].position.y);
-
+        endShape(CLOSE);
       }
       if(keypoint.score > 0.2 && keypoint.position.x > width/2){
         fill(0,255,0);
