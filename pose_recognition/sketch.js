@@ -81,10 +81,14 @@ function drawKeypoints()  {
       //  vertex(pose.keypoints[7].position.x-20, pose.keypoints[7].position.y);
       //  vertex(pose.keypoints[7].position.x+20, pose.keypoints[7].position.y);
       //  endShape(CLOSE);
+
+      //upperarm 5/7, 6/8
         strokeWeight(20);
         stroke(107, 53, 17);
         line(pose.keypoints[5].position.x, pose.keypoints[5].position.y,
               pose.keypoints[7].position.x, pose.keypoints[7].position.y);
+        line(pose.keypoints[6].position.x, pose.keypoints[6].position.y,
+              pose.keypoints[8].position.x, pose.keypoints[8].position.y);
       }
       if(keypoint.score > 0.2 && keypoint.position.x > width/2){
         fill(0,255,0);
