@@ -82,6 +82,7 @@ function drawKeypoints()  {
       //  vertex(pose.keypoints[7].position.x+20, pose.keypoints[7].position.y);
       //  endShape(CLOSE);
         strokeWeight(20);
+        stroke(107, 53, 17);
         line(pose.keypoints[5].position.x, pose.keypoints[5].position.y,
               pose.keypoints[7].position.x, pose.keypoints[7].position.y);
       }
