@@ -104,6 +104,7 @@ function drawSkeleton() {
       let partA = skeleton[j][0];
       let partB = skeleton[j][1];
       stroke(255, 0, 0);
+      strokeWeight(1);
       line(partA.position.x, partA.position.y, partB.position.x, partB.position.y);
     }
   }
