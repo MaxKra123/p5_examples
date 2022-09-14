@@ -68,6 +68,7 @@ function drawKeypoints()  {
 
         //chest - 5,6,11,12
         fill(107, 53, 17);
+        strokeWeight(50);
         beginShape();
         vertex(pose.keypoints[5].position.x, pose.keypoints[5].position.y);
         vertex(pose.keypoints[6].position.x, pose.keypoints[6].position.y);
@@ -83,7 +84,7 @@ function drawKeypoints()  {
       //  endShape(CLOSE);
 
       //upperarm 5/7, 6/8
-        strokeWeight(20);
+        strokeWeight(50);
         stroke(107, 53, 17);
         line(pose.keypoints[5].position.x, pose.keypoints[5].position.y,
               pose.keypoints[7].position.x, pose.keypoints[7].position.y);
