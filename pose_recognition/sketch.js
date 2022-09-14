@@ -104,8 +104,8 @@ function drawKeypoints()  {
         for(i = 0; i <10; i++)
         {
           fill(76, 125, 76);
-          ellipse(random(pose.keypoints[1].position.x-100, pose.keypoints[1].position.x+100),
-                 random(pose.keypoints[1].position.y-100, pose.keypoints[1].position.y+100));
+          ellipse(random(pose.keypoints[0].position.x-100, pose.keypoints[0].position.x+100),
+                 random(pose.keypoints[0].position.y-100, pose.keypoints[0].position.y+100), 50, 50);
         }
 
       }
