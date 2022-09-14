@@ -90,12 +90,12 @@ function drawKeypoints()  {
         line(pose.keypoints[6].position.x, pose.keypoints[6].position.y,
               pose.keypoints[8].position.x, pose.keypoints[8].position.y);
 
-      //lower arm 8/10, 9/11
+      //lower arm 8/10, 7/9
         stroke(107, 53, 17);
         line(pose.keypoints[8].position.x, pose.keypoints[8].position.y,
               pose.keypoints[10].position.x, pose.keypoints[10].position.y);
-        line(pose.keypoints[9].position.x, pose.keypoints[9].position.y,
-              pose.keypoints[11].position.x, pose.keypoints[11].position.y);
+        line(pose.keypoints[7].position.x, pose.keypoints[7].position.y,
+              pose.keypoints[9].position.x, pose.keypoints[9].position.y);
       }
       if(keypoint.score > 0.2 && keypoint.position.x > width/2){
         fill(0,255,0);
