@@ -61,7 +61,7 @@ function drawKeypoints()  {
         fill(255, 0, 0);
         noStroke();
         textSize(18);
-        text(pose.keypoints[j], keypoint.position.x, keypoint.position.y);
+        text(j, keypoint.position.x, keypoint.position.y);
         ellipse(keypoint.position.x, keypoint.position.y, 10, 10);
       }
       if(keypoint.score > 0.2 && keypoint.position.x > width/2){
